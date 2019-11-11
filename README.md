@@ -15,3 +15,6 @@ Mein Ziel ist es eine grafische, der Webseite angepasste, Lösung zu schaffen, w
 - Formular für Kunde und Formular für mehrere oder ein Velo variabel anpassbar, mit "Zeile hinzufügen"-Button
 - Speichern der eingegeben Daten in einer Textdatei
 - Abrufen der Daten aus einer Textdatei
+
+# Flowchart 1.1
+![flowchart](Flowchart.png "Flowchart")
