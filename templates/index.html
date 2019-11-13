@@ -1,29 +1,9 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    {% block header %}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Gossauer Velotag</title>
-  </head>
+{% extends "template.html" %}
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  		<a class="navbar-brand" href="#">Gossauer Velotag</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    		<div class="navbar-nav">
-      			<a class="nav-item nav-link active" href="index.html">Startseite</a>
-      			<a class="nav-item nav-link" href="hinzufuegen.html">Velo hinzufügen</a>
-      			<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Registrieren</a>
-      			<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Anmelden</a>
-    		</div>
-  		</div>
-	 </nav>
+{% block title %}Startseite Gossauer Velotag{% endblock %}
 
+{% block main %}
+<div>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -45,9 +25,8 @@
       <span class="sr-only">Vorwärts</span>
     </a>
   </div><br>
-
   <div class="row">
-    <div class="col">
+    <div class="col-1">
     </div>
     <div class="col-10"><br>
       <h1>Herzlich Willkommen auf der Webseite des Gossauer Velotags!</h1><br><hr><br>
@@ -55,15 +34,8 @@
       <p>Für den Gossauer Velotag am Samstag, 30. April, kamen insgesamt 235 Velos zusammen. Für 112 verkaufte Velos wurden über 10’000 Franken an die Verkäuferinnen und Verkäufer ausbezahlt. 49 Velos gingen als Spende an die Stiftung Tosam.</p><br>
       <p>Erstmals gab es eine Pump- und Putzstation in Zusammenarbeit mit dem Friedegg-Treff Gossau und einen grossen Parcours auf mehr als 2500 Quadratmetern auf dem Marktplatz, gemeinsam organisiert mit dem VCS. Das Service-Team putzte Velos, pumpte Pneus und reinigte und fettete Ketten. Viele nutzen den autofreien Marktplatz als ideales Gelände für eine Testfahrt, ein Teil davon war mit Material aus der Ludothek Gossau als Geschicklichkeitsparcours für Kinder ab 3 Jahren gestaltet.</p><hr><br>
     </div>
-    <div class="col">
+    <div class="col-1">
     </div>
   </div>
-
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  {% endblock %}
-  </body>
-
-</html>
+</div>
+{% endblock %}
