@@ -13,7 +13,7 @@ def index():
 
 @app.route("/hinzufuegen")
 def hinzufuegen():
-	return render_template("hinzufuegen.html", name="Velo hinzufügen")
+    return render_template("hinzufuegen.html", name="Velo hinzufügen")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
