@@ -7,14 +7,14 @@
   <div class="col-1">
   </div>
   <div class="col-10"><br>
-    <form>
+    <form method="POST">
     <h1>Velo hinzufügen</h1><br>
       <div class="form-group col-12 col-md-8 col-sm-2">
-        <label for="inputMarke">Marke</label>
-        <input type="text" class="form-control" id="inputMarke" placeholder="z.B. Cube, Merida, Scott"><br>
-        <label for="inputFarbe">Farbe</label>
-        <input type="text" class="form-control" id="inputFarbe" placeholder="z.B. schwarz, silber, rot"><br>
-        <label for="inputRahmenart">Rahmenart</label>
+        <label for="marke">Marke</label>
+        <input type="text" class="form-control" id="marke" name="marke" required placeholder="z.B. Cube, Merida, Scott"><br>
+        <label for="farbe">Farbe</label>
+        <input type="text" class="form-control" id="farbe" name="farbe" required placeholder="z.B. schwarz, silber, rot"><br>
+        <!-- <label for="inputRahmenart">Rahmenart</label>
         <select id="inputRahmenart" class="form-control">
           <option selected>Wähle...</option>
           <option>Damenvelo</option>
@@ -34,17 +34,20 @@
         <div class="form-group row">
         <label for="staticPreis" class="col-sm-4 col-form-label">Verkaufspreis: </label>
           <div class="col-sm-8">
-          <input type="text" readonly class="form-control-plaintext" id="staticPreis" value="python function coming in here!">
+          <input type="text" readonly class="form-control-plaintext" id="staticPreis" value="python function coming in here!"><br>
           </div>
         </div>
       </div>
       <div class="form-check col-12 col-md-8 col-sm-2">
         <input class="form-check-input" type="checkbox" id="checkNichtverkauf">
         <label class="form-check-label" for="checkNichtverkauf">
-        <p>Ich spende mein Fahrrad beim Nichtverkauf an die Stiftung.</p></label><br>
+        <p>Ich spende mein Fahrrad beim Nichtverkauf an die Stiftung.</p></label><br><br> -->
         <button type="submit" class="btn btn-primary">Velo hinzufügen</button><br><br><hr><br>
       </div>
     </form>
+    {% if error %}
+        {{ error }}
+    {% endif %}
   </div>
   <div class="col-1">
   </div>

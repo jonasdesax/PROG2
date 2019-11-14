@@ -7,13 +7,13 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/slider_1.jpg" class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='slider_1.jpg') }}" alt="slider_1" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="images/slider_2.jpg" class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='slider_2.jpg') }}" alt="slider_2" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="images/slider_3.jpg" class="d-block w-100" alt="...">
+        <img src="{{ url_for('static', filename='slider_3.jpg') }}" alt="slider_3" class="d-block w-100">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
