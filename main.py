@@ -22,9 +22,11 @@ def hinzufuegen():
 
     return render_template("hinzufuegen.html")
 
-# @app.route("/hinzufuegen")
-# def hinzufuegen():
-#    return render_template("hinzufuegen.html", name="Velo hinzufügen")
+# @app.route("/datenbank", methods=['GET', 'POST'])
+# def datenbank():
+    # if (request.method == 'GET'):
+    # daten = datenbank.datenbank_lesen()
+    # return render_template("datenbank.html", datenbank=daten)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

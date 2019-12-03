@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block title %}Velo Übersicht{% endblock %}
+
+{% block main %}
+<div class="row">
+  <div class="col-1">
+  </div>
+  <div class="col-10"><br>
+    <form method="GET">
+    <h1>Velo Übersicht</h1><br>
+    </form>
+    {% if error %}
+        {{ error }}
+    {% endif %}
+  </div>
+  <div class="col-1">
+  </div>
+</div>
+{% endblock %}

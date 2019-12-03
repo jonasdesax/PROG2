@@ -10,9 +10,9 @@ def datenbank_lesen():
     finally:
         return data
 
-def eintrag_speichern(marke, farbe):
+def eintrag_speichern(marke, farbe, rahmen, preis, spende):
     datenbank = datenbank_lesen()
-    datenbank[marke] = {"marke": marke, "farbe": farbe}   
+    datenbank[marke] = {"marke": marke, "farbe": farbe, "rahmen": rahmen, "preis": preis, "spende": spende}   
     print(datenbank)
     with open('datenbank.txt', "w", encoding="utf-8") as open_file:
         json.dump(datenbank, open_file)
@@ -21,7 +21,10 @@ def eintrag_speichern_von_formular(form_request):
     print(form_request)
     marke = form_request.get('marke')
     farbe = form_request.get('farbe')
-    eintrag_speichern(marke, farbe)
+    rahmen = form_request.get('rahmen')
+    preis = form_request.get('preis')
+    spende = form_request.get('spende')
+    eintrag_speichern(marke, farbe, rahmen, preis, spende)
 
 
 def person_suchen(form_request):
@@ -30,4 +33,3 @@ def person_suchen(form_request):
 
     if marke in datenbank:
         return {marke: datenbank[marke]}
-
