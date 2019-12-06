@@ -16,34 +16,20 @@
         <input type="text" class="form-control" id="farbe" name="farbe" required placeholder="z.B. schwarz, silber, rot"><br>
 
         <label for="rahmen">Rahmenart</label>
-        <select id="rahmen" class="form-control">
+        <select id="rahmen" name="rahmen" class="form-control">
           <option selected>Wähle...</option>
-          <option>Damenvelo</option>
-          <option>Herrenvelo</option>
-          <option>Kindervelo</option>
-          <option>Mountainbike</option>
-          <option>Rennvelo</option>
+          <option value="Damenvelo">Damenvelo</option>
+          <option value="Herrenvelo">Herrenvelo</option>
+          <option value="Kindervelo">Kindervelo</option>
+          <option value="Mountainbike">Mountainbike</option>
+          <option value="Rennvelo">Rennvelo</option>
         </select><br>
         <label for="preis">Wunschpreis</label>
-        <input type="text" class="form-control" id="preis"><br>
-        <!--
-        <div class="form-group row">
-        <label for="zuschlag" class="col-sm-4 col-form-label">+ Zuschlag: </label>
-          <div class="col-sm-8">
-          <input type="text" readonly class="form-control-plaintext" id="zuschlag" value="python function coming in here!">
-          </div>
-        </div>
-        <div class="form-group row">
-        <label for="verkaufspreis" class="col-sm-4 col-form-label">Verkaufspreis: </label>
-          <div class="col-sm-8">
-          <input type="text" readonly class="form-control-plaintext" id="verkaufspreis" value="python function coming in here!"><br>
-          </div>
-        </div>
-        -->
+        <input type="text" class="form-control" id="preis" name="preis"><br>
       </div>
       <div class="form-check col-12 col-md-8 col-sm-2">
         <label class="form-check-label" for="spende">Ich spende mein Fahrrad beim Nichtverkauf an die Stiftung.</label>
-        <input class="form-check-input" type="checkbox" id="spende"><br><br>
+        <input class="form-check-input" type="checkbox" id="spende" name="spende"><br><br>
         <button type="submit" class="btn btn-primary">Velo hinzufügen</button><br><br><hr><br>
       </div>
     </form>

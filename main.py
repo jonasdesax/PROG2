@@ -18,15 +18,14 @@ def index():
 def hinzufuegen():
     if (request.method == 'POST'):
         datenbank.eintrag_speichern_von_formular(request.form)
-        return redirect("/")
+        return redirect("/veloliste")
 
     return render_template("hinzufuegen.html")
 
-# @app.route("/datenbank", methods=['GET', 'POST'])
-# def datenbank():
-    # if (request.method == 'GET'):
-    # daten = datenbank.datenbank_lesen()
-    # return render_template("datenbank.html", datenbank=daten)
+@app.route("/veloliste")
+def veloliste():
+    daten = datenbank.datenbank_lesen()
+    return render_template("datenbank.html", datenbank=daten)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

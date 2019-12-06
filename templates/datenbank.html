@@ -13,6 +13,18 @@
     {% if error %}
         {{ error }}
     {% endif %}
+
+    {% for marke, velos in datenbank.items() %}
+      {{ marke }}:<br>
+      
+      {% for key, value in velos.items() %}
+        {{ key }}: {{ value }}<br>
+      {% endfor %}
+      <hr>
+      <br>
+    {% endfor %}
+
+
   </div>
   <div class="col-1">
   </div>
