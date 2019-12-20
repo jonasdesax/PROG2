@@ -18,6 +18,10 @@ def index():
 def hinzufuegen():
     if (request.method == 'POST'):
         datenbank.eintrag_speichern_von_formular(request.form)
+        #marke = request.form["marke"]
+        #farbe = request.form["farbe"]
+        #bildname = marke + "-" + "farbe" + "-" + "etc.
+        #https://stackoverflow.com/questions/44926465/upload-image-in-flask
         return redirect("/veloliste")
 
     return render_template("hinzufuegen.html")
