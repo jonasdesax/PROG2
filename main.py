@@ -6,11 +6,26 @@ from flask import url_for
 
 from libs import datenbank
 
-#UPLOAD_FOLDER = '/static/velobilder'
-#ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+UPLOAD_FOLDER = '/static/velobilder'
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask("Velotag")
-#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['/static/velobilder'] = UPLOAD_FOLDER
+
+def upload_file():
+    if (request.method == 'POST'):
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit a empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['/static/velobilder'], filename))
 
 @app.route("/")
 @app.route("/index")
@@ -25,25 +40,7 @@ def hinzufuegen():
         return redirect("/veloliste")
 
     return render_template("hinzufuegen.html")
-        #marke = request.form["marke"]
-        #farbe = request.form["farbe"]
-        #bildname = marke + "-" + farbe + "-"
-"""
-def upload_file():
-    if (request.method == 'POST'):
-        if 'file' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
-        file = request.files['file']
-        # if user does not select file, browser also
-        # submit a empty part without filename
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-"""
+
 
 @app.route("/veloliste")
 def veloliste():
