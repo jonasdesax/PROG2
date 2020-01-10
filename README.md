@@ -5,16 +5,13 @@ Zurzeit wird dieses Problem mit einem PDF-Dokument gelöst, welches per Email zu
 
 # Projektidee
 
-Mein Ziel ist es eine grafische, der Webseite angepasste, Lösung zu schaffen, welche den Kunden ermöglicht direkt alle Angaben online zu erfassen. Für die Eingabe wird ein Benutzerkonto verwendet, der User muss sich somit registrieren. Die Eingabe soll über eine Art Formular laufen und für jedes erfasste Fahrrad soll eine eindeutige ID vergeben werden, damit beim Verkauf nichts falsch läuft. Die gesamte Lösung ist vorallem für Kunden angedacht, welche mehrere Velos zum Verkauf anbieten möchten. Des Weiteren soll am Ende eine Art Quittung generiert werden, wo alle erfassten Fahrräder aufgelistet werden. Diese Quittung sollte perfekt auf ein A4-Format druckbar sein. 
+Mein Ziel ist es eine grafische, der Webseite angepasste, Lösung zu schaffen, welche den Kunden ermöglicht direkt alle Angaben online zu erfassen. Für die Eingabe wird ein Benutzerkonto verwendet, der User muss sich somit registrieren. Die Eingabe soll über eine Art Formular laufen und für jedes erfasste Fahrrad soll ein Namen vergeben werden, damit beim Verkauf nichts falsch läuft. Die gesamte Lösung ist vorallem für Kunden angedacht, welche mehrere Velos zum Verkauf anbieten möchten. Des Weiteren soll am Ende eine Art Quittung generiert werden, wo alle erfassten Fahrräder aufgelistet werden.
 
 # Pain Points
-
-- Registrieren- und Anmelde-Button programmieren, sodass es sicher ist
-- ID's vergeben für jedes einzelne erfasste Velo
-- Quittung erstellen im A4-Format
-- Formular für Kunde und Formular für mehrere oder ein Velo variabel anpassbar, mit "Zeile hinzufügen"-Button
+- Erstellung des Formulars, sodass Informationen an Datenbank übertragen werden
 - Speichern der eingegeben Daten in einer Textdatei
 - Abrufen der Daten aus einer Textdatei
+- korrekte grafische Darstellung der Daten
 
 # Flowchart 1.1
-![flowchart](Flowchart.png "Flowchart")
+![flowchart](static/Flowchart.png "Flowchart")
