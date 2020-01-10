@@ -35,6 +35,8 @@ def hinzufuegen():
 
     return render_template("hinzufuegen.html") 
 
+# Funktion um Bilder hochzuladen
+# zurzeit noch fehlerhaft!
 def upload_file():
     if (request.method == 'POST'):
         if 'file' not in request.files:
@@ -43,8 +45,7 @@ def upload_file():
         file = request.files['file']
         
         print(file)
-        # wenn der Benutzer keine Datei auswählt
-        # sendet der Server eine leere Datei ab
+        # wenn der Benutzer keine Datei auswählt, sendet der Server eine leere Datei ab
         if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
@@ -52,8 +53,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['/static/velobilder'], filename))
 
-
-
+# öffnet die Datenbank und gibt Sie in der HTML-Datei datenbank.html aus
 @app.route("/veloliste")
 def veloliste():
     daten = datenbank.datenbank_lesen()
