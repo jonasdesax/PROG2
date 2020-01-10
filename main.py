@@ -12,10 +12,6 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app = Flask("Velotag")
 app.config['/static/velobilder'] = UPLOAD_FOLDER
 
-"""
-
-"""
-
 @app.route("/")
 @app.route("/index")
 def index():
@@ -27,12 +23,17 @@ def hinzufuegen():
     if (request.method == 'POST'):
         datenbank.eintrag_speichern_von_formular(request.form)
         return redirect("/veloliste")
+
+    return render_template("hinzufuegen.html") 
+
 def upload_file():
     if (request.method == 'POST'):
         if 'file' not in request.files:
             flash('No file part')
             return redirect(request.url)
         file = request.files['file']
+        
+        print(file)
         # if user does not select file, browser also
         # submit a empty part without filename
         if file.filename == '':
@@ -42,7 +43,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['/static/velobilder'], filename))
 
-    return render_template("hinzufuegen.html") 
+
 
 @app.route("/veloliste")
 def veloliste():
