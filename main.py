@@ -43,9 +43,7 @@ def upload_file():
             flash('No file part')
             return redirect(request.url)
         file = request.files['file']
-        
         print(file)
-        # wenn der Benutzer keine Datei auswählt, sendet der Server eine leere Datei ab
         if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
