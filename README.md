@@ -12,6 +12,7 @@ Mein Ziel ist es eine grafische, der Webseite angepasste, Lösung zu schaffen, w
 - Speichern der eingegeben Daten in einer Textdatei
 - Abrufen der Daten aus einer Textdatei
 - korrekte grafische Darstellung der Daten
+- variable Berechnung der Zuschläge
 
 # Flowchart 1.1
 ![flowchart](static/Flowchart.png "Flowchart")
