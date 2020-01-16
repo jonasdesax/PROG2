@@ -29,14 +29,15 @@ def index():
 # Verknüpfung des Formulars, welches ausgefüllt werden kann, mit der Datenbank
 @app.route("/hinzuguegen", methods=['GET', 'POST'])
 def hinzufuegen():
-    if (request.method == 'POST'):
+    if (request.method == 'POST'): # POST überträgt die im Formular eingegebenen Daten
         datenbank.eintrag_speichern_von_formular(request.form)
         return redirect("/veloliste")
 
     return render_template("hinzufuegen.html") 
 
 # Funktion um Bilder hochzuladen
-# zurzeit noch fehlerhaft!
+# theoretisch sollte es funktionieren, möglicherweise Fehler bei der Übertragung
+# wird in einem späteren Release behoben
 def upload_file():
     if (request.method == 'POST'):
         if 'file' not in request.files:
@@ -49,12 +50,12 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['/static/velobilder'], filename))
+            file.save(os.path.join(app.config['/static/velobilder'], filename)) # Pfad stimmt, jedoch erscheinen Bilder nicht im Ordner
 
 # öffnet die Datenbank und gibt Sie in der HTML-Datei datenbank.html aus
 @app.route("/veloliste")
 def veloliste():
-    daten = datenbank.datenbank_lesen()
+    daten = datenbank.datenbank_lesen()  # liefert uns die erfassten Fahrräder unter dem Menupunkt Velo Übersicht
     return render_template("datenbank.html", datenbank=daten)
 
 if __name__ == "__main__":

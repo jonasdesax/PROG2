@@ -7,6 +7,7 @@
 <div>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
+      <!-- Hier wurde der Slider eingebunden über dynamische URL's in Flask -->
       <div class="carousel-item active">
         <img src="{{ url_for('static', filename='slider_1.jpg') }}" alt="slider_1" class="d-block w-100">
       </div>
@@ -17,6 +18,7 @@
         <img src="{{ url_for('static', filename='slider_3.jpg') }}" alt="slider_3" class="d-block w-100">
       </div>
     </div>
+    <!-- Folgende Programmierung ist für die Funktionstasten vorwärts und zurück im Slider zuständig -->
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Zurück</span>

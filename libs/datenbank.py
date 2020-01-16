@@ -9,7 +9,7 @@ def datenbank_lesen():
         with open('datenbank.txt', "r") as open_file:
             data = json.load(open_file)
     except:
-        print("Fehler mit Datei!")
+        print("Fehler mit Datei!") # gibt die Fehlermeldung "Fehler mit Datei" aus
     finally:
         return data
 
@@ -30,20 +30,21 @@ def eintrag_speichern_von_formular(form_request):
     rahmen = form_request.get('rahmen')
     preis = int(form_request.get('preis'))
     # hier wird mithilfe einer if-Schleife, der Preis berechnet, es bestehen variable Preise
-    if preis<50:
+    if preis<50: # bis 50.- ist der Zuschlag 5.-
         zuschlag = 5
         verkaufspreis = preis + 5
-    elif preis<100:
+    elif preis<100: # bis 100.- ist der Zuschlag 10.-
         zuschlag = 10
         verkaufspreis = preis + 10
     else:
-        zuschlag = preis*0.1
+        zuschlag = preis*0.1 # über 100.- ist der Zuschlag jeweils 10%
         verkaufspreis = preis * 1.1
     spende = form_request.get('spende')
     # hier wird angegeben, dass alle erfassten und berechneten Informationen auch korrekt und vollständig übertragen werden
-    eintrag_speichern(marke, farbe, rahmen, preis, zuschlag, verkaufspreis, spende)
+    eintrag_speichern(marke, farbe, rahmen, preis, zuschlag, verkaufspreis, spende) # auch der Zuschlag und der Verkaufspreis wird reingenommen
 
 # hier wird ermöglicht, dass ein Fahrrad gesucht werden kann
+# dies dient für eine spätere Erweiterung des Projektes, sodass der Kunde nach seinen Fahrrädern suchen kann
 def eintrag_suchen(form_request):
     datenbank = datenbank_lesen()
     marke = form_request.get('marke')

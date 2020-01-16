@@ -1,3 +1,8 @@
+# Vorinformation
+
+Die folgende Plattform wurde im Rahmen des Moduls Programmieren 2 an der Fachhochschule Graubünden erstellt.
+Ziel dieser Plattform ist es mithilfe Daten entgegenzunehmen, diese zu speichern und auf einer nächsten Seite wieder abzubilden.
+
 # Ausgangslage
 
 Als Organisator der Velobörse in Gossau, möchte ich gewisse Prozesse digitalisieren um so den Kunden Zeit zu ersparen. Konkret möchte ich die Veloabgabe so vereinfachen, dass die Kunden bereits im Voraus alle Daten Ihres Velos erfassen können und somit nur noch das Velo hinstellen müssen, statt darauf zu warten bis jemand Zeit hat das Velo zu erfassen. 
@@ -35,7 +40,7 @@ Die Originalität ist vorallem darin zu sehen, dass die Anwendung zu einem spät
 # Flowchart 1.1
 ![flowchart](static/Flowchart.png "Flowchart")
 
-# nächste Schritte
+# Nächste Schritte
 - Einbindung von Bildern so optimieren, dass Bilder zu den jeweiligen Produkten erscheinen
 - Anmelde- und Registrierfunktion umsetzen, sodass sie verschlüsselt und sicher ist
 - Testing der Plattform, sodass Fehler in der Usability festgestellt und optimiert werden können

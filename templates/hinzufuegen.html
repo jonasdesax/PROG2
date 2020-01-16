@@ -14,8 +14,9 @@
         <label for="marke">Marke</label>
         <input type="text" class="form-control" id="marke" name="marke" required placeholder="z.B. Cube, Merida, Scott"><br>
         <label for="farbe">Farbe</label>
-        <input type="text" class="form-control" id="farbe" name="farbe" required placeholder="z.B. schwarz, silber, rot"><br>
+        <input type="text" class="form-control" id="farbe" name="farbe" required placeholder="z.B. schwarz, silber, rot"><br> <!-- ID und Name-Tags sind essentiell für die Verknüpfung mit Python Flask -->
         <label for="rahmen">Rahmenart</label>
+        <!-- Folgender Code ist für das Dropdown zuständig, welches es dem Kunden ermöglicht, nur von diesen 5 Kategorien zu wählen -->
         <select id="rahmen" name="rahmen" class="form-control">
           <option selected>Wähle...</option>
           <option value="Damenvelo">Damenvelo</option>
@@ -24,6 +25,7 @@
           <option value="Mountainbike">Mountainbike</option>
           <option value="Rennvelo">Rennvelo</option>
         </select><br>
+        <!-- hier legt der Kunde seinen Wunschpreis fest, anhand des Wunschpreises wird in der Datenbank-->
         <label for="preis">Wunschpreis</label>
         <input type="text" class="form-control" id="preis" name="preis">
       </div><br>
